@@ -9,15 +9,18 @@ const UserActionButton = async () => {
   const actionURL = user ? "/api/auth/signout" : "/api/auth/signin";
 
   return (
-    <div className="flex justify-between gap-2">
+    <div className="flex justify-between gap-2 items-center">
       {user && (
-        <Link href="/users/dashboard" className="py-1">
+        <Link
+          href="/users/dashboard"
+          className="py-1 px-4 bg-color-secondary rounded-full text-color-primary"
+        >
           Dashboard
         </Link>
       )}
       <Link
         href={actionURL}
-        className="bg-color-dark text-color-accent py-1 px-12 inline-block"
+        className="bg-color-dark text-blue-400 border border-blue-400 py-1 px-4 rounded-full inline-block"
       >
         {actionLabel}
       </Link>

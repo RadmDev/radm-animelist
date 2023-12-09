@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;

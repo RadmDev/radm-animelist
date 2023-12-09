@@ -21,14 +21,17 @@ const InputSearch = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="flex rounded-full border-2 border-color-secondary">
       <input
         placeholder="cari anime..."
-        className="w-full p-2 rounded"
+        className="w-full px-5 py-2 bg-color-dark text-color-primary rounded-s-full focus:outline-none"
         ref={searchRef}
         onKeyDown={handleSearch}
       />
-      <button className="absolute top-2 end-2" onClick={handleSearch}>
+      <button
+        className="px-5 py-2 rounded-e-full bg-color-secondary text-color-primary"
+        onClick={handleSearch}
+      >
         <MagnifyingGlass size={24} />
       </button>
     </div>

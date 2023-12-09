@@ -23,9 +23,15 @@ const CollectionPage = async () => {
             href={`/anime/${item.anime_mal_id}`}
             className="relative border-2 border-color-accent"
           >
-            <Image src="" alt="" width={350} height={350} className="w-full" />
+            <Image
+              src={item.anime_image}
+              alt={item.anime_image}
+              width={350}
+              height={350}
+              className="w-full"
+            />
             <div className="absolute flex justify-center items-center bottom-0 w-full bg-color-accent h-16">
-              <h5 className="text-xl text-center">Judul Anime Judul Anime</h5>
+              <h5 className="text-xl text-center">J{item.anime_title}</h5>
             </div>
           </Link>
         ))}

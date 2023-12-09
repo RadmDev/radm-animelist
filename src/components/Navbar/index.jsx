@@ -4,10 +4,11 @@ import UserActionButton from "./UserActionButton";
 
 const Navbar = () => {
   return (
-    <header className="bg-color-accent">
+    <header className="fixed w-full bg-color-dark z-[2]">
       <div className="flex flex-col gap-2 md:flex-row justify-between items-center p-4">
-        <Link href="/" className="font-bold text-2xl">
-          CUYANIMELIST
+        <Link href="/" className="font-bold text-2xl text-color-primary">
+          <span className="text-color-red">RADM </span>
+          animelist
         </Link>
         <InputSearch />
         <UserActionButton />

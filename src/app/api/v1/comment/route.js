@@ -2,13 +2,14 @@ import prisma from "@/lib/prisma";
 
 export const POST = async (request) => {
   try {
-    const { anime_mal_id, user_email, anime_image, anime_title } =
+    const { anime_mal_id, user_email, comment, username, anime_title } =
       await request.json();
-    const data = { anime_mal_id, user_email, anime_image, anime_title };
+    const data = { anime_mal_id, user_email, comment, username, anime_title };
 
-    const createCollection = await prisma.collection.create({ data });
+    const createComment = await prisma.comment.create({ data });
+    // console.log({ data });
 
-    if (!createCollection) {
+    if (!createComment) {
       return Response.json({ status: 500, isCreated: false });
     } else {
       return Response.json({ status: 200, isCreated: true });
