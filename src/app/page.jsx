@@ -14,7 +14,7 @@ const Page = async () => {
     "entry"
   );
 
-  recommendedAnime = reproduce(recommendedAnime, 4);
+  recommendedAnime = reproduce(recommendedAnime, 5);
 
   return (
     <>
