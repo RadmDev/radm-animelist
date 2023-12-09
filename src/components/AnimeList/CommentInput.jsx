@@ -39,20 +39,21 @@ const CommentInput = ({ anime_mal_id, user_email, username, anime_title }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 mt-8">
       {isCreated && <p className="text-color-primary">postingan terkirim...</p>}
       <textarea
-        name=""
-        id=""
+        name="publicComment"
+        id="publicComment"
+        placeholder="Posting Komentar..."
         onChange={handleInput}
         value={comment}
         cols="30"
         rows="10"
-        className="w-full h-32 text-xl p-4"
+        className="w-full h-32 text-xl p-4 bg-color-dark text-color-primary rounded-md border border-color-secondary focus:outline-none"
       />
       <button
         onClick={handlePosting}
-        className="w-52 py-2 px-3 bg-color-accent"
+        className="w-52 py-2 px-3 bg-color-secondary text-color-primary rounded-md"
       >
         Posting Komentar
       </button>

@@ -33,7 +33,7 @@ const CollectionButton = ({
       ) : (
         <button
           onClick={handleCollection}
-          className="px-2 py-1 bg-color-accent"
+          className="px-4 py-1 bg-color-red text-color-primary rounded-md mb-4 lg:mb-8"
         >
           Add To Collection
         </button>
