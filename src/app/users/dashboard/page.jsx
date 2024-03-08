@@ -10,7 +10,7 @@ const Page = async () => {
     <div className="text-color-primary mt-8 flex flex-col justify-center items-center">
       <h5 className="text-2xl font-bold">Welcome, {user?.name}</h5>
       <Image src={user?.image} alt="..." width={250} height={250} />
-      <div className="py-8 flex flex-wrap gap-4">
+      {/* <div className="py-8 flex flex-wrap gap-4">
         <Link
           href="/users/dashboard/collection"
           className="bg-color-accent text-color-dark px-4 py-3 text-xl"
@@ -23,7 +23,7 @@ const Page = async () => {
         >
           My Comment
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };

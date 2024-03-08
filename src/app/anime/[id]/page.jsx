@@ -9,13 +9,13 @@ import Image from "next/image";
 
 const Page = async ({ params: { id } }) => {
   const anime = await getAnimeResponse(`anime/${id}`);
-  const user = await authUserSession();
-  const collection = await prisma.collection.findFirst({
-    where: {
-      user_email: user?.email,
-      anime_mal_id: id,
-    },
-  });
+  // const user = await authUserSession();
+  // const collection = await prisma.collection.findFirst({
+  //   where: {
+  //     user_email: user?.email,
+  //     anime_mal_id: id,
+  //   },
+  // });
   // console.log({ collection });
 
   return (
@@ -54,7 +54,7 @@ const Page = async ({ params: { id } }) => {
               <p>{anime.data.episodes}</p>
             </div>
           </div>
-          <div>
+          {/* <div>
             {!collection && user && (
               <CollectionButton
                 anime_mal_id={id}
@@ -63,11 +63,11 @@ const Page = async ({ params: { id } }) => {
                 anime_title={anime.data.title}
               />
             )}
-          </div>
+          </div> */}
           <p className="text-justify text-xl">{anime.data.synopsis}</p>
         </div>
       </div>
-      <div className="p-4 mt-14">
+      {/* <div className="p-4 mt-14">
         <h3 className="text-color-primary text-2xl mb-4">Komentar Penonton</h3>
         <CommentBox anime_mal_id={id} />
         {user && (
@@ -78,7 +78,7 @@ const Page = async ({ params: { id } }) => {
             anime_title={anime.data.title}
           />
         )}
-      </div>
+      </div> */}
       <div>
         <VideoPlayer youtubeId={anime.data.trailer.youtube_id} />
       </div>
